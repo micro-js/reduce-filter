@@ -2,7 +2,7 @@
   "name": "@micro-js/reduce-filter",
   "description": "Generates a reducer that filters its accumulator using a predicate derived from its value argument.",
   "repository": "git://github.com/micro-js/reduce-filter.git",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
