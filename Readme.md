@@ -6,14 +6,19 @@
 [![NPM version][npm-image]][npm-url]
 [![Code style][standard-image]][standard-url]
 
-Generates a reducer that filters its accumulator using a predicate derived from its value argument. That is complicated to state, but simple to read as code:
+Generates a reducer that filters its accumulator by reducing each of its items to a boolean value. That is somewhat complicated to state, but easy to read as code:
 
 ```javascript
 function reduceFilter (fn) {
   return function (state, value) {
-    return filter(fn(value, state), state)
+    return filter(predicate, state)
+
+    function predicate (item, key) {
+      return fn(item, value, key)
+    }
   }
 }
+
 ```
 
 ## Installation
@@ -27,10 +32,8 @@ var reduceFilter = require('@micro-js/reduce-filter')
 
 reduceFilter(isDivisbleBy)([1, 2, 3, 4, 5], 2) // -> [2, 4]
 
-function isDivisbleBy(n) {
-  return function (m) {
-    return m % n === 0
-  }
+function isDivisbleBy (m, n) {
+  return m % n === 0
 }
 
 ```
@@ -39,9 +42,9 @@ function isDivisbleBy(n) {
 
 ### reduceFilter(fn)
 
-- `fn` - Accepts `(value, state)` from the reducer, and returns a filter predicate.
+- `fn` - Accepts `(item, value, key)` and returns a bool, indicating whether or not to retain `item`.
 
-**Returns:** Returns a reducing function that accepts `(state, value)` and returns a new `state` filtered by the predicate returned by `fn(value, state)`.
+**Returns:** Returns a reducing function that accepts `(state, value)` and returns a new container of type `state` filtered by `fn`.
 
 ## License
 

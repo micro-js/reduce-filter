@@ -14,8 +14,6 @@ test('should work', function (t) {
   t.end()
 })
 
-function isDivisbleBy(n) {
-  return function (m) {
-    return m % n === 0
-  }
+function isDivisbleBy (m, n) {
+  return m % n === 0
 }
