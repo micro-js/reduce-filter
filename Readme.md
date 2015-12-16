@@ -23,12 +23,12 @@ function reduceFilter (fn) {
 
 ## Installation
 
-    $ npm install @micro-js/reduce-filter
+    $ npm install @f/reduce-filter
 
 ## Usage
 
 ```js
-var reduceFilter = require('@micro-js/reduce-filter')
+var reduceFilter = require('@f/reduce-filter')
 
 reduceFilter(isDivisbleBy)([1, 2, 3, 4, 5], 2) // -> [2, 4]
 
@@ -56,5 +56,5 @@ MIT
 [git-url]: https://github.com/micro-js/reduce-filter
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat
 [standard-url]: https://github.com/feross/standard
-[npm-image]: https://img.shields.io/npm/v/@micro-js/reduce-filter.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/@micro-js/reduce-filter
+[npm-image]: https://img.shields.io/npm/v/@f/reduce-filter.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@f/reduce-filter

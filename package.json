@@ -1,5 +1,5 @@
 {
-  "name": "@micro-js/reduce-filter",
+  "name": "@f/reduce-filter",
   "description": "Generates a reducer that filters its accumulator using a predicate derived from its value argument.",
   "repository": "git://github.com/micro-js/reduce-filter.git",
   "version": "2.0.0",
@@ -9,7 +9,7 @@
     "postversion": "git push && git push --tags && npm publish --access=public"
   },
   "dependencies": {
-    "@micro-js/filter": "^1.0.0"
+    "@f/filter": "^1.0.0"
   },
   "devDependencies": {
     "tape": "^4.2.2"
